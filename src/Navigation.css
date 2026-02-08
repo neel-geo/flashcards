@@ -1,6 +1,6 @@
 .menu-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #1a2332;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,20 +11,24 @@
   max-width: 1000px;
   width: 100%;
   text-align: center;
-  color: white;
+  color: #e8dcc4;
 }
 
 .menu-title {
   font-size: 3em;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  color: #d4af37;
+  letter-spacing: 1px;
+  font-family: 'Garamond', 'EB Garamond', serif;
 }
 
 .menu-subtitle {
   font-size: 1.3em;
-  opacity: 0.9;
+  opacity: 0.8;
   margin-bottom: 50px;
+  font-weight: 300;
+  color: #c9b88a;
 }
 
 .menu-cards {
@@ -36,19 +40,21 @@
 }
 
 .menu-card {
-  background: white;
-  border-radius: 20px;
+  background: #2a3847;
+  border-radius: 8px;
+  border: 1px solid #3d4f5f;
   padding: 40px 30px;
   width: 400px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  color: #333;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  color: #e8dcc4;
 }
 
 .menu-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  border-color: #8b7355;
 }
 
 .menu-card-icon {
@@ -58,31 +64,34 @@
 
 .menu-card h2 {
   font-size: 1.8em;
-  color: #667eea;
+  color: #d4af37;
   margin-bottom: 15px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .menu-card p {
-  font-size: 1.1em;
-  color: #4a5568;
+  font-size: 1.05em;
+  color: #c9b88a;
   line-height: 1.6;
   margin-bottom: 20px;
+  font-weight: 300;
 }
 
 .menu-card-stats {
-  font-size: 0.95em;
-  color: #764ba2;
-  font-weight: 600;
-  background: rgba(118, 75, 162, 0.1);
+  font-size: 0.9em;
+  color: #8b7355;
+  font-weight: 400;
+  background: rgba(139, 115, 85, 0.2);
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: 4px;
   display: inline-block;
+  letter-spacing: 1px;
 }
 
 .menu-footer {
   font-size: 1em;
-  opacity: 0.8;
+  opacity: 0.6;
+  font-style: italic;
 }
 
 .back-button {
@@ -91,20 +100,23 @@
   left: 20px;
   padding: 12px 24px;
   font-size: 16px;
-  font-weight: 600;
-  color: white;
-  background: rgba(0, 0, 0, 0.3);
-  border: 2px solid white;
-  border-radius: 50px;
+  font-weight: 400;
+  color: #e8dcc4;
+  background: rgba(42, 56, 71, 0.9);
+  border: 1px solid #8b7355;
+  border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 1000;
   backdrop-filter: blur(10px);
+  font-family: 'Garamond', 'EB Garamond', serif;
+  letter-spacing: 1px;
 }
 
 .back-button:hover {
-  background: rgba(0, 0, 0, 0.5);
-  transform: translateX(-5px);
+  background: rgba(42, 56, 71, 1);
+  border-color: #d4af37;
+  transform: translateX(-3px);
 }
 
 @media (max-width: 768px) {

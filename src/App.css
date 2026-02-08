@@ -1,7 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Garamond', 'EB Garamond', serif;
+  background: #1a2332;
+  color: #e8dcc4;
+}
+
 .App {
   text-align: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #1a2332;
   padding: 20px;
 }
 
@@ -11,28 +23,31 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #e8dcc4;
 }
 
 h1 {
   margin-bottom: 5px;
   font-size: 2.5em;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  font-weight: 400;
+  color: #d4af37;
+  letter-spacing: 1px;
 }
 
 h2 {
   margin-top: 5px;
   margin-bottom: 10px;
   font-size: 1.3em;
-  font-weight: 400;
+  font-weight: 300;
   opacity: 0.9;
+  color: #c9b88a;
 }
 
 .instruction {
   margin-bottom: 30px;
   font-size: 0.9em;
-  opacity: 0.8;
+  opacity: 0.7;
+  font-style: italic;
 }
 
 .flashcard {
@@ -62,31 +77,78 @@ h2 {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 40px;
   box-sizing: border-box;
+  border: 1px solid #3d4f5f;
 }
 
 .flashcard-front {
-  background: white;
-  color: #333;
+  background: #2a3847;
+  color: #e8dcc4;
 }
 
 .flashcard-back {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  color: #333;
+  background: #2a3847;
+  color: #e8dcc4;
   transform: rotateY(180deg);
+}
+
+.english-sentence {
+  font-size: 28px;
+  font-weight: 400;
+  color: #e8dcc4;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.translations {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+.translation-section {
+  text-align: left;
+  padding: 20px;
+  background: rgba(42, 56, 71, 0.5);
+  border-radius: 4px;
+  border-left: 3px solid #8b7355;
+}
+
+.language-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #8b7355;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.native-script {
+  font-family: 'Noto Sans Bengali', 'Noto Sans Devanagari', sans-serif;
+  font-size: 32px;
+  color: #e8dcc4;
+  margin-bottom: 8px;
+  line-height: 1.8;
+}
+
+.transliteration {
+  font-size: 18px;
+  color: #a8906b;
+  font-style: italic;
 }
 
 .bengali-letter {
   font-size: 200px;
-  font-weight: bold;
-  color: #667eea;
-  font-family: 'Noto Sans Bengali', 'Mukti', 'SolaimanLipi', sans-serif;
+  font-weight: normal;
+  color: #d4af37;
+  font-family: 'Noto Sans Bengali', sans-serif;
   line-height: 1;
 }
 
@@ -99,69 +161,74 @@ h2 {
 
 .letter-name {
   font-size: 48px;
-  font-weight: bold;
-  color: #2d3748;
+  font-weight: normal;
+  color: #e8dcc4;
   margin-bottom: 10px;
 }
 
 .bengali-text {
-  font-family: 'Noto Sans Bengali', 'Mukti', 'SolaimanLipi', sans-serif;
+  font-family: 'Noto Sans Bengali', sans-serif;
   font-size: 52px;
 }
 
 .roman-text {
   font-size: 32px;
-  color: #4a5568;
+  color: #c9b88a;
   font-style: italic;
 }
 
 .letter-type {
-  font-size: 22px;
-  color: #667eea;
-  font-weight: 600;
-  background: rgba(102, 126, 234, 0.1);
+  font-size: 18px;
+  color: #8b7355;
+  font-weight: 400;
+  background: rgba(139, 115, 85, 0.2);
   padding: 8px 16px;
-  border-radius: 8px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 .pronunciation {
-  font-size: 20px;
-  color: #2d3748;
+  font-size: 18px;
+  color: #e8dcc4;
   text-align: left;
   padding: 12px;
-  background: white;
-  border-radius: 8px;
-  border-left: 4px solid #667eea;
+  background: rgba(42, 56, 71, 0.5);
+  border-radius: 4px;
+  border-left: 3px solid #8b7355;
 }
 
 .pronunciation strong {
-  color: #667eea;
+  color: #c9b88a;
+  font-weight: 600;
 }
 
 .example-word {
   text-align: left;
   padding: 12px;
-  background: white;
-  border-radius: 8px;
-  border-left: 4px solid #764ba2;
+  background: rgba(42, 56, 71, 0.5);
+  border-radius: 4px;
+  border-left: 3px solid #8b7355;
 }
 
 .example-word strong {
-  color: #764ba2;
-  font-size: 18px;
+  color: #c9b88a;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .example-bengali {
-  font-family: 'Noto Sans Bengali', 'Mukti', 'SolaimanLipi', sans-serif;
-  font-size: 36px;
-  font-weight: bold;
-  color: #2d3748;
+  font-family: 'Noto Sans Bengali', sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  color: #e8dcc4;
   margin: 8px 0;
 }
 
 .example-details {
-  font-size: 18px;
-  color: #4a5568;
+  font-size: 16px;
+  color: #a8906b;
   font-style: italic;
 }
 
@@ -169,29 +236,31 @@ h2 {
   margin-top: 30px;
   padding: 15px 40px;
   font-size: 18px;
-  font-weight: 600;
-  color: white;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border: none;
-  border-radius: 50px;
+  font-weight: 400;
+  color: #e8dcc4;
+  background: #3d4f5f;
+  border: 1px solid #8b7355;
+  border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  letter-spacing: 1px;
+  font-family: 'Garamond', 'EB Garamond', serif;
 }
 
 .next-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  background: #4a5d6f;
+  border-color: #d4af37;
 }
 
 .next-button:active {
-  transform: translateY(0);
+  transform: translateY(1px);
 }
 
 .progress {
   margin-top: 20px;
   font-size: 16px;
-  opacity: 0.8;
+  opacity: 0.6;
+  font-style: italic;
 }
 
 @media (max-width: 768px) {
@@ -204,20 +273,16 @@ h2 {
     font-size: 150px;
   }
 
-  .letter-name {
-    font-size: 36px;
-  }
-
-  .bengali-text {
-    font-size: 40px;
-  }
-
-  .roman-text {
+  .english-sentence {
     font-size: 24px;
   }
 
-  .example-bengali {
+  .native-script {
     font-size: 28px;
+  }
+
+  .transliteration {
+    font-size: 16px;
   }
 
   h1 {
@@ -242,28 +307,11 @@ h2 {
     gap: 15px;
   }
 
-  .letter-name {
-    font-size: 28px;
-  }
-
-  .bengali-text {
-    font-size: 32px;
-  }
-
-  .roman-text {
+  .english-sentence {
     font-size: 20px;
   }
 
-  .letter-type {
-    font-size: 18px;
-  }
-
-  .pronunciation,
-  .example-word {
-    font-size: 16px;
-  }
-
-  .example-bengali {
+  .native-script {
     font-size: 24px;
   }
 }
